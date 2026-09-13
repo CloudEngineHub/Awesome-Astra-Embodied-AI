@@ -7,7 +7,7 @@ GPT-6 Astra with embodied AI / robotics workflows and demos.
 Cases are grouped by workflow and ordered by publication date, newest first within each section.
 
 - 🤖 [Zero-shot Control](#-zero-shot-control)
-  - 🧪 [Deploy in Simulation](#-deploy-in-simulation) — 9 cases
+  - 🧪 [Deploy in Simulation](#-deploy-in-simulation) — 10 cases
   - 🌍 [Deploy in Real World](#-deploy-in-real-world) — 10 cases
 - 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 1 case
 - 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 6 cases
@@ -19,7 +19,17 @@ Cases are grouped by workflow and ordered by publication date, newest first with
 
 Astra directly performs zero-shot control in a simulator.
 
-#### Case 1: [Quadruped Task via Five-key-joint Trajectory](https://x.com/gclue_akira/status/2098300921658868185)
+#### Case 1: [G1 Cola Bottle Pick-up in Isaac Sim](https://x.com/RotekSong/status/2099104628562608371)
+
+**Source / Credit:** [Flood Sung (@RotekSong)](https://x.com/RotekSong), X demo of the GPT-6 Codex agent controlling a Unitree G1 in Isaac Sim.
+
+**Published:** 2026-09-13
+
+<p align="center"><img src="assets/case-32-g1-cola-isaac-sim.jpg" alt="Unitree G1 picking up a cola bottle in Isaac Sim" width="720" /></p>
+
+Astra controls the simulated G1 to reach for and pick up a cola bottle through the SONIC planner and low-level controller.
+
+#### Case 2: [Quadruped Task via Five-key-joint Trajectory](https://x.com/gclue_akira/status/2098300921658868185)
 
 **Source / Credit:** [Akira Sasaki (@gclue_akira)](https://x.com/gclue_akira), X quadruped locomotion demo where Astra outputs five key-joint trajectories for MuJoCo execution.
 
@@ -29,7 +39,7 @@ Astra directly performs zero-shot control in a simulator.
 
 Astra supplies the sparse trajectory while the low-level controller executes the quadruped behavior in MuJoCo.
 
-#### Case 2: [G1 Navigation Trajectory Tracked by SONIC](https://x.com/RotekSong/status/2098212303263183329/video/1)
+#### Case 3: [G1 Navigation Trajectory Tracked by SONIC](https://x.com/RotekSong/status/2098212303263183329/video/1)
 
 **Source / Credit:** [Flood Sung (@RotekSong)](https://x.com/RotekSong), X demo of Astra producing a navigation trajectory for SONIC to track.
 
@@ -39,7 +49,7 @@ Astra supplies the sparse trajectory while the low-level controller executes the
 
 Astra outputs the trajectory while SONIC performs the low-level tracking in simulation.
 
-#### Case 3: [Robot Hands Solve a Rubik’s Cube](https://x.com/ZeYanjie/status/2098118164626501669)
+#### Case 4: [Robot Hands Solve a Rubik’s Cube](https://x.com/ZeYanjie/status/2098118164626501669)
 
 **Source / Credit:** [Ze Yanjie (@ZeYanjie)](https://x.com/ZeYanjie), X demo titled “GPT6 Astra solved Rubik’s Cube with robot hands.”
 
@@ -49,7 +59,7 @@ Astra outputs the trajectory while SONIC performs the low-level tracking in simu
 
 Astra performs zero-shot dexterous cube manipulation in simulation.
 
-#### Case 4: [Dexterous Apple-stem Grasp in SuperDex](https://www.rednote.com/discovery/item/6aa27b3a000000002b025d03?xsec_token=ABWznjLAd9oNPOxPF1Mc6ZfMK0VKAVH4AMkoYwkdPqQRw=&xsec_source=pc_search&source=web_profile_page)
+#### Case 5: [Dexterous Apple-stem Grasp in SuperDex](https://www.rednote.com/discovery/item/6aa27b3a000000002b025d03?xsec_token=ABWznjLAd9oNPOxPF1Mc6ZfMK0VKAVH4AMkoYwkdPqQRw=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [Kiki Huang](https://www.rednote.com/user/profile/62f72244000000001f0176ea), Rednote demo using the Meta SuperDex physics backend and MuJoCo rendering.
 
@@ -59,7 +69,7 @@ Astra performs zero-shot dexterous cube manipulation in simulation.
 
 Astra controls a dexterous hand to grasp the narrow stem of an apple in simulation.
 
-#### Case 5: [GPT-6 Astra on HumanCLAW-Bench](https://x.com/Kuvvius/status/2098038921301311753)
+#### Case 6: [GPT-6 Astra on HumanCLAW-Bench](https://x.com/Kuvvius/status/2098038921301311753)
 
 **Source / Credit:** [Jiawei Gu (@Kuvvius)](https://x.com/Kuvvius), X benchmark demo using the open-source HumanCLAW-Bench harness and motion generator.
 
@@ -69,7 +79,7 @@ Astra controls a dexterous hand to grasp the narrow stem of an apple in simulati
 
 Astra completes benchmark navigation and interaction tasks through the simulation harness.
 
-#### Case 6: [Whole-body Trajectory with a Whole-body Controller](https://www.rednote.com/discovery/item/6a9fe4df00000000110341b8?xsec_token=ABMaVBcBS54ctuQIxmhMJMZVm36xy72xuPS8s6aICdfXM=&xsec_source=pc_search&source=web_profile_page)
+#### Case 7: [Whole-body Trajectory with a Whole-body Controller](https://www.rednote.com/discovery/item/6a9fe4df00000000110341b8?xsec_token=ABMaVBcBS54ctuQIxmhMJMZVm36xy72xuPS8s6aICdfXM=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [橘子不是唯一的水果](https://www.rednote.com/user/profile/695bb2a2000000003702ea8f), Rednote demo where Astra generates a whole-body trajectory and a whole-body controller executes it.
 
@@ -79,7 +89,7 @@ Astra completes benchmark navigation and interaction tasks through the simulatio
 
 Astra generates the trajectory while the whole-body controller closes the execution loop.
 
-#### Case 7: [Isaac Sim Cube Grasp from One Prompt](https://www.rednote.com/discovery/item/6aa017a8000000002b002341?xsec_token=ABeuYgBbxlsBRQGFSm3KRd7TFtNG2CtmpEnSxlcSsSC4E=&xsec_source=pc_like)
+#### Case 8: [Isaac Sim Cube Grasp from One Prompt](https://www.rednote.com/discovery/item/6aa017a8000000002b002341?xsec_token=ABeuYgBbxlsBRQGFSm3KRd7TFtNG2CtmpEnSxlcSsSC4E=&xsec_source=pc_like)
 
 **Source / Credit:** [神秘小孙](https://www.rednote.com/user/profile/5b3f9fc86b58b75d4c02ccc0), Rednote demo of Astra building a depth-camera robot-arm cube-grasp scene in Isaac Sim.
 
@@ -89,7 +99,7 @@ Astra generates the trajectory while the whole-body controller closes the execut
 
 Astra receives one task sentence and produces a working simulated grasp demo.
 
-#### Case 8: [Physically Writing a Fibonacci Sequence](https://x.com/dimentary/status/2097455860541009958)
+#### Case 9: [Physically Writing a Fibonacci Sequence](https://x.com/dimentary/status/2097455860541009958)
 
 **Source / Credit:** [Dmytro Hrybov (@dimentary)](https://x.com/dimentary), X demo of Astra generating a Unitree G1 motion for a physical Fibonacci-writing task.
 
@@ -99,7 +109,7 @@ Astra receives one task sentence and produces a working simulated grasp demo.
 
 Astra attempts a long-horizon simulated manipulation task that ends with generated code and robot motion.
 
-#### Case 9: [LLM Harness for Tabletop Robot Control](https://x.com/DJiafei/status/2096601096705995155)
+#### Case 10: [LLM Harness for Tabletop Robot Control](https://x.com/DJiafei/status/2096601096705995155)
 
 **Source / Credit:** [Jiafei Duan (@DJiafei)](https://x.com/DJiafei), X demo of a GPT-6 Astra harness solving a tabletop grasp-and-place task.
 
@@ -113,7 +123,7 @@ Astra writes and runs the control loop for a simulated tabletop manipulation tas
 
 Real-robot demonstrations with explicit hardware and deployment context.
 
-#### Case 10: [Learning to Type and Self-express on a Keyboard](https://x.com/kaiwynd/status/2098823484474348008)
+#### Case 11: [Learning to Type and Self-express on a Keyboard](https://x.com/kaiwynd/status/2098823484474348008)
 
 **Source / Credit:** [Kaifeng Zhang (@kaiwynd)](https://x.com/kaiwynd), X demo where Astra learns to operate a keyboard with a real robot after being asked to express itself.
 
@@ -123,7 +133,7 @@ Real-robot demonstrations with explicit hardware and deployment context.
 
 Astra turns an open-ended semantic instruction into physical key presses, learning the robot control through visual feedback in about 40 minutes.
 
-#### Case 11: [Marker Grasp from Low-level Control Only](https://www.rednote.com/discovery/item/6aa4d7e200000000260145ff?xsec_token=ABur_B60E14GxVQp2ei3USGtEElW40SN75Vj5aB_USVUA=&xsec_source=pc_search&source=web_profile_page)
+#### Case 12: [Marker Grasp from Low-level Control Only](https://www.rednote.com/discovery/item/6aa4d7e200000000260145ff?xsec_token=ABur_B60E14GxVQp2ei3USGtEElW40SN75Vj5aB_USVUA=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [star大小变](https://www.rednote.com/user/profile/69c2311e000000003203e786), Rednote demo where Astra discovers joint-to-end-effector control and grasps a marker without prior skills.
 
@@ -133,7 +143,7 @@ Astra turns an open-ended semantic instruction into physical key presses, learni
 
 Astra explores the robot’s joint readings and reaches a marker grasp in about 30 minutes.
 
-#### Case 12: [GPT-Policy-Eval One-shot Plug Insertion](https://github.com/cheng-haha/GPT-Policy-Eval)
+#### Case 13: [GPT-Policy-Eval One-shot Plug Insertion](https://github.com/cheng-haha/GPT-Policy-Eval)
 
 **Source / Credit:** [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval), one-shot video demonstration of GPT-6 Astra guiding a real robot to grasp and insert a plug with visual feedback.
 
@@ -143,7 +153,7 @@ Astra explores the robot’s joint readings and reaches a marker grasp in about 
 
 Astra executes a contact-rich plug-insertion task from a single video demonstration without VLA, RL, or DAgger; see the complementary [RoboCurve evaluation](https://openai.robocurve.org/gpt-6-astra/) for controlled robot-arm results.
 
-#### Case 13: [Mobile Manipulation with In-context Learning](https://x.com/ax_pey/status/2098216469012283681)
+#### Case 14: [Mobile Manipulation with In-context Learning](https://x.com/ax_pey/status/2098216469012283681)
 
 **Source / Credit:** [Axel (@ax_pey)](https://x.com/ax_pey), X demo explicitly showing GPT-6 Astra in-context learning across environments, viewpoints, and layouts.
 
@@ -153,7 +163,7 @@ Astra executes a contact-rich plug-insertion task from a single video demonstrat
 
 Astra infers mobile-manipulation behavior from visual context without a task-specific text prompt.
 
-#### Case 14: [Rapid Adaptation to an Unseen Robot Embodiment](https://x.com/lucascassiano/status/2097830777438486557)
+#### Case 15: [Rapid Adaptation to an Unseen Robot Embodiment](https://x.com/lucascassiano/status/2097830777438486557)
 
 **Source / Credit:** [Lucas Cassiano (@lucascassiano)](https://x.com/lucascassiano), X demo giving Astra full access to the robot hardware and the [Vitrus AI](https://x.com/Vitrus_ai) robotics OS.
 
@@ -163,7 +173,7 @@ Astra infers mobile-manipulation behavior from visual context without a task-spe
 
 Astra learns to control a robot embodiment it has not seen before, without human egocentric data or a VLA, showing rapid online adaptation to a new control interface.
 
-#### Case 15: [ENPIRE Robotics Harness In-context Learning](https://x.com/TongheZhang01/status/2097801107602911243)
+#### Case 16: [ENPIRE Robotics Harness In-context Learning](https://x.com/TongheZhang01/status/2097801107602911243)
 
 **Source / Credit:** [Tonghe Zhang (@TongheZhang01)](https://x.com/TongheZhang01), X demo of GPT-6 Astra performing robot in-context learning through the ENPIRE harness.
 
@@ -173,7 +183,7 @@ Astra learns to control a robot embodiment it has not seen before, without human
 
 Astra learns the real-world behavior from demonstrations in context, without task-specific retraining.
 
-#### Case 16: [Cucumber Slicing with Loop-ROS](https://www.rednote.com/discovery/item/6aa0c4900000000012034a2f?xsec_token=ABYB6HItIwwYq0Yyi9-hwoM-vMalkFRmYMAkN0iUWpTM4=&xsec_source=pc_search&source=web_profile_page)
+#### Case 17: [Cucumber Slicing with Loop-ROS](https://www.rednote.com/discovery/item/6aa0c4900000000012034a2f?xsec_token=ABYB6HItIwwYq0Yyi9-hwoM-vMalkFRmYMAkN0iUWpTM4=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [盒子桥](https://www.rednote.com/user/profile/65bb8b3d000000000d03e137), Rednote demo of GPT-6 Astra directly controlling a robot through Loop-ROS.
 
@@ -183,7 +193,7 @@ Astra learns the real-world behavior from demonstrations in context, without tas
 
 Astra controls the robot arm through the slicing sequence in the real world.
 
-#### Case 17: [Painting the Golden Gate Bridge from a Semantic Prompt](https://x.com/cdngdev/status/2097339677128982873)
+#### Case 18: [Painting the Golden Gate Bridge from a Semantic Prompt](https://x.com/cdngdev/status/2097339677128982873)
 
 **Source / Credit:** [thijs (@cdngdev)](https://x.com/cdngdev), X demo where Astra is given a robot, a paintbrush, and a camera, then asked to paint the Golden Gate Bridge in the real world.
 
@@ -193,7 +203,7 @@ Astra controls the robot arm through the slicing sequence in the real world.
 
 Astra translates the high-level visual concept into physical brush strokes and progressively improves the painting across attempts using camera feedback.
 
-#### Case 18: [Direct End-effector Pose Control](https://www.rednote.com/discovery/item/6a9fc0710000000029015578?xsec_token=ABMaVBcBS54ctuQIxmhMJMZSAU7Wspgd3bmCnb4tQqHsU=&xsec_source=pc_search&source=web_profile_page)
+#### Case 19: [Direct End-effector Pose Control](https://www.rednote.com/discovery/item/6a9fc0710000000029015578?xsec_token=ABMaVBcBS54ctuQIxmhMJMZSAU7Wspgd3bmCnb4tQqHsU=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [Loule](https://www.rednote.com/user/profile/69ddd8920000000033024ad0), Rednote demo of Astra directly outputting end-effector poses for a robot arm.
 
@@ -203,7 +213,7 @@ Astra translates the high-level visual concept into physical brush strokes and p
 
 Astra places the longest piece of bread into a basket using third-person and wrist cameras.
 
-#### Case 19: [Piper Carrot Pick-and-place](https://www.rednote.com/discovery/item/6a9bd4c80000000028037f67?xsec_token=ABLUcokp8Tzdy13Avv1khxst1pWqWBaR7JLjQhUhWsSs4=&xsec_source=pc_like)
+#### Case 20: [Piper Carrot Pick-and-place](https://www.rednote.com/discovery/item/6a9bd4c80000000028037f67?xsec_token=ABLUcokp8Tzdy13Avv1khxst1pWqWBaR7JLjQhUhWsSs4=&xsec_source=pc_like)
 
 **Source / Credit:** [虽然不但是](https://www.rednote.com/user/profile/5f5ca72900000000010061fb), Rednote demo using only Codex/GPT-6, Piper, and the RealSense SDK.
 
@@ -217,7 +227,7 @@ Astra directly controls Piper through repeated visual pick-and-place attempts.
 
 Astra performs high-level task understanding and decomposition, then calls a pretrained embodied foundation model for low-level control.
 
-#### Case 20: [Zero-shot Task Execution through FluxVLA](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
+#### Case 21: [Zero-shot Task Execution through FluxVLA](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [Jikun](https://www.rednote.com/user/profile/5e25bcdc00000000010085a8), Rednote demo pairing GPT-6 Astra with the pretrained [FluxVLA](https://github.com/FluxVLA/FluxVLA) policy.
 
@@ -231,7 +241,7 @@ Astra performs high-level task understanding and decomposition, then calls a pre
 
 Workflows that reconstruct or replay real-world trajectories, demonstrations, and environments in simulation.
 
-#### Case 21: [Lab Kitchen Reconstruction with Articulated Objects](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
+#### Case 22: [Lab Kitchen Reconstruction with Articulated Objects](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [Frank ZY Dou](https://www.rednote.com/user/profile/5e3431cf0000000001002919), Rednote demo reconstructing a lab kitchen from a 20-second monocular RGB video with movable cabinets and other articulated structures.
 
@@ -241,7 +251,7 @@ Workflows that reconstruct or replay real-world trajectories, demonstrations, an
 
 Astra iteratively models a real kitchen and its articulated objects into a simulation scene.
 
-#### Case 22: [Rope-driven Dexterous Hand Reconstruction](https://x.com/dimentary/status/2097857980150763900)
+#### Case 23: [Rope-driven Dexterous Hand Reconstruction](https://x.com/dimentary/status/2097857980150763900)
 
 **Source / Credit:** [Dmytro Hrybov (@dimentary)](https://x.com/dimentary), X attempt to recreate 1X's tendon-driven hand demo from a reference video in MuJoCo.
 
@@ -251,7 +261,7 @@ Astra iteratively models a real kitchen and its articulated objects into a simul
 
 Astra rebuilds the hand and motion, but uses simplified mechanics and illustrative cable deformation rather than full tendon-transmission physics.
 
-#### Case 23: [Tendon-driven Dexterous Hand Motion Reconstruction](https://x.com/earthtojake/status/2097789988670709821)
+#### Case 24: [Tendon-driven Dexterous Hand Motion Reconstruction](https://x.com/earthtojake/status/2097789988670709821)
 
 **Source / Credit:** [Jake Fitzgerald (@earthtojake)](https://x.com/earthtojake), X demo in which Astra designs and reconstructs the motion of a tendon-driven robot hand.
 
@@ -261,7 +271,7 @@ Astra rebuilds the hand and motion, but uses simplified mechanics and illustrati
 
 Astra reconstructs the tendon-driven hand's motion in a simulated model, including cable-actuated finger movement.
 
-#### Case 24: [Dexterous Hand-object Data Rollout](https://x.com/Lingxiao234/status/2097717020540481630)
+#### Case 25: [Dexterous Hand-object Data Rollout](https://x.com/Lingxiao234/status/2097717020540481630)
 
 **Source / Credit:** [Lingxiao (@Lingxiao234)](https://x.com/Lingxiao234), X demo showing two videos driving real-to-sim reconstruction and physical retargeting to Wuji hands.
 
@@ -271,7 +281,7 @@ Astra reconstructs the tendon-driven hand's motion in a simulated model, includi
 
 Astra reconstructs hand-object interaction from videos without explicit states or actions.
 
-#### Case 25: [Video in → Physics out](https://x.com/huxiao93612565/status/2097815230105399402)
+#### Case 26: [Video in → Physics out](https://x.com/huxiao93612565/status/2097815230105399402)
 
 **Source / Credit:** [xiao hu (@huxiao93612565)](https://x.com/huxiao93612565), X demo of Astra writing hand tracking, IK retargeting, and grasp-refinement code for a 44-DOF hand.
 
@@ -281,7 +291,7 @@ Astra reconstructs hand-object interaction from videos without explicit states o
 
 Astra turns visual hand motion into a physics-backed dexterous-hand replay.
 
-#### Case 26: [Multi-view Real-to-sim Reconstruction](https://x.com/Lingxiao234/status/2096992059731443923)
+#### Case 27: [Multi-view Real-to-sim Reconstruction](https://x.com/Lingxiao234/status/2096992059731443923)
 
 **Source / Credit:** [Lingxiao (@Lingxiao234)](https://x.com/Lingxiao234), X demo combining multi-view RGB, robot actions, camera calibration, assets, system identification, MuJoCo, and Blender.
 
@@ -295,7 +305,7 @@ Astra builds a replayable simulator from demonstrations, geometry, and physical 
 
 Workflows where Astra helps create environments, task definitions, training code, and experiment iterations.
 
-#### Case 27: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
+#### Case 28: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [拂晓时分_茉莉飘香](https://www.rednote.com/user/profile/5ffbc96d00000000010060ae), Rednote demo reporting an RL-trained duck robot generated from one image and one description.
 
@@ -305,7 +315,7 @@ Workflows where Astra helps create environments, task definitions, training code
 
 Astra builds and trains a locomotion demo from a compact visual specification.
 
-#### Case 28: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
+#### Case 29: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
 
 **Source / Credit:** [Akira Sasaki (@gclue_akira)](https://x.com/gclue_akira), X report of Astra designing a robot dog, iterating 25 loops in five days, and training nine motions with RL.
 
@@ -315,7 +325,7 @@ Astra builds and trains a locomotion demo from a compact visual specification.
 
 Astra co-designs the quadruped and trains a simulated locomotion system; real-hardware debugging is planned rather than completed.
 
-#### Case 29: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
+#### Case 30: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote RL demo of a dexterous hand manipulating a walnut; self-collision was not enabled in the reported run.
 
@@ -325,7 +335,7 @@ Astra co-designs the quadruped and trains a simulated locomotion system; real-ha
 
 Astra trains the in-hand manipulation behavior while exposing the reported collision-model limitation.
 
-#### Case 30: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
+#### Case 31: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
 
 **Source / Credit:** [Jiarui Xu (@Jiarui_X)](https://x.com/Jiarui_X), X demo where Astra rebuilds an office scan in Blender, exports USD, and creates a G1 walking scene in Newton.
 
@@ -335,7 +345,7 @@ Astra trains the in-hand manipulation behavior while exposing the reported colli
 
 Astra creates the environment and training-ready humanoid simulation scene.
 
-#### Case 31: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
+#### Case 32: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote demo of Astra building an Isaac Sim RL environment, configuring PPO, and tuning the run.
 
@@ -349,7 +359,7 @@ Astra handles environment construction, training configuration, and iteration in
 
 These entries index representative partial or unsuccessful outcomes. A failure can reflect modeling, calibration, embodiment, or tool limits in one setup and does not prove that Astra lacks the underlying capability.
 
-- [Rope-driven Dexterous Hand Reconstruction](#case-22-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
+- [Rope-driven Dexterous Hand Reconstruction](#case-23-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
 
 ## 🔗 Related Blogs & Projects
 
