@@ -211,15 +211,15 @@ Workflows that reconstruct or replay real-world trajectories, demonstrations, an
 
 Astra iteratively models a real kitchen and its articulated objects into a simulation scene.
 
-#### Case 19: [Rope-driven Dexterous Hand Reconstruction](https://x.com/dimentary/status/2097857980150763900)
+#### Case 19: [Tendon-driven Dexterous Hand Motion Reconstruction](https://x.com/earthtojake/status/2097789988670709821)
 
-**Source / Credit:** [Dmytro Hrybov (@dimentary)](https://x.com/dimentary), X attempt to recreate 1X’s tendon-driven hand demo from a reference video in MuJoCo.
+**Source / Credit:** [Jake Fitzgerald (@earthtojake)](https://x.com/earthtojake), X demo in which Astra designs and reconstructs the motion of a tendon-driven robot hand.
 
-**Published:** 2026-09-10
+**Published:** 2026-09-09
 
-<p align="center"><img src="assets/case-12-rope-hand-failure.jpg" alt="Partial rope-driven hand reconstruction in MuJoCo" width="720" /></p>
+<p align="center"><img src="assets/case-12-rope-hand-failure.jpg" alt="Tendon-driven dexterous hand motion reconstruction" width="720" /></p>
 
-Astra rebuilds the hand and motion, but uses simplified mechanics and illustrative cable deformation rather than full tendon-transmission physics.
+Astra reconstructs the tendon-driven hand's motion in a simulated model, including cable-actuated finger movement.
 
 #### Case 20: [Dexterous Hand-object Data Rollout](https://x.com/Lingxiao234/status/2097717020540481630)
 
@@ -304,12 +304,6 @@ Astra creates the environment and training-ready humanoid simulation scene.
 <p align="center"><img src="assets/case-23-rl-training.jpg" alt="Isaac Sim reinforcement-learning training" width="720" /></p>
 
 Astra handles environment construction, training configuration, and iteration in one workflow.
-
-## ⚠️ Failure Cases
-
-These entries index representative partial or unsuccessful outcomes. A failure can reflect modeling, calibration, embodiment, or tool limits in one setup and does not prove that Astra lacks the underlying capability.
-
-- [Rope-driven Dexterous Hand Reconstruction](#case-19-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
 
 ## 🔗 Related Blogs & Projects
 
