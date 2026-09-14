@@ -27,7 +27,7 @@ Astra directly performs zero-shot control in a simulator.
 
 <p align="center"><img src="assets/case-32-g1-cola-isaac-sim.jpg" alt="Unitree G1 picking up a cola bottle in Isaac Sim" width="720" /></p>
 
-Astra controls the simulated G1 to reach for and pick up a cola bottle through the SONIC planner and low-level controller.
+Astra performs high-level planning for the cola-bottle pick-up, and the GEAR-SONIC planner converts the plan into a whole-body qpos trajectory for the simulated G1 to execute.
 
 #### Case 2: [Quadruped Task via Five-key-joint Trajectory](https://x.com/gclue_akira/status/2098300921658868185)
 
@@ -47,7 +47,7 @@ Astra supplies the sparse trajectory while the low-level controller executes the
 
 <p align="center"><img src="assets/case-01-g1-navigation.jpg" alt="Unitree G1 navigation simulation" width="720" /></p>
 
-Astra outputs the trajectory while SONIC performs the low-level tracking in simulation.
+Astra performs high-level navigation planning, and the GEAR-SONIC planner converts the plan into a whole-body qpos trajectory for the simulated G1 to execute.
 
 #### Case 4: [Robot Hands Solve a Rubik’s Cube](https://x.com/ZeYanjie/status/2098118164626501669)
 
