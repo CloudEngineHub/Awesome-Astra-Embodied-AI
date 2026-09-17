@@ -11,7 +11,8 @@ Cases are grouped by workflow and ordered by publication date, newest first with
   - 🌍 [Deploy in Real World](#-deploy-in-real-world) — 10 cases
 - 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 1 case
 - 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 6 cases
-- 🛠️ [Astra Builds RL Training Environments and Training](#-astra-builds-rl-training-environments-and-training) — 5 cases
+- 🛠️ [Astra Builds RL Training Environments and Training](#-astra-builds-rl-training-environments-and-training) — 6 cases
+- 📊 [Public Benchmark & Evaluation Reports](#-public-benchmark--evaluation-reports)
 
 ## 🤖 Zero-shot Control
 
@@ -325,7 +326,17 @@ Astra builds a replayable simulator from demonstrations, geometry, and physical 
 
 Workflows where Astra helps create environments, task definitions, training code, and experiment iterations.
 
-#### Case 30: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
+#### Case 30: [Sharpa Hand Pen-spinning RL in Isaac Lab](https://x.com/walterzhu8/status/2100212420840989112)
+
+**Source / Credit:** [Wentao Zhu (@walterzhu8)](https://x.com/walterzhu8), X report of an autonomous Astra run by his student Chengyang Li to build and train a dexterous-hand pen-spinning task.
+
+**Published:** 2026-09-16
+
+<p align="center"><img src="assets/case-35-sharpa-pen-spinning-rl.jpg" alt="Sharpa Wave dexterous hand spinning a pen with a PPO policy in Isaac Lab" width="720" /></p>
+
+Astra creates the pen mesh, implements the Sharpa-hand task in Isaac Lab, trains the PPO policy, and produces a visualization video during an autonomous run of about a day and a half.
+
+#### Case 31: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [拂晓时分_茉莉飘香](https://www.rednote.com/user/profile/5ffbc96d00000000010060ae), Rednote demo reporting an RL-trained duck robot generated from one image and one description.
 
@@ -335,7 +346,7 @@ Workflows where Astra helps create environments, task definitions, training code
 
 Astra builds and trains a locomotion demo from a compact visual specification.
 
-#### Case 31: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
+#### Case 32: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
 
 **Source / Credit:** [Akira Sasaki (@gclue_akira)](https://x.com/gclue_akira), X report of Astra designing a robot dog, iterating 25 loops in five days, and training nine motions with RL.
 
@@ -345,7 +356,7 @@ Astra builds and trains a locomotion demo from a compact visual specification.
 
 Astra co-designs the quadruped and trains a simulated locomotion system; real-hardware debugging is planned rather than completed.
 
-#### Case 32: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
+#### Case 33: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote RL demo of a dexterous hand manipulating a walnut; self-collision was not enabled in the reported run.
 
@@ -355,7 +366,7 @@ Astra co-designs the quadruped and trains a simulated locomotion system; real-ha
 
 Astra trains the in-hand manipulation behavior while exposing the reported collision-model limitation.
 
-#### Case 33: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
+#### Case 34: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
 
 **Source / Credit:** [Jiarui Xu (@Jiarui_X)](https://x.com/Jiarui_X), X demo where Astra rebuilds an office scan in Blender, exports USD, and creates a G1 walking scene in Newton.
 
@@ -365,7 +376,7 @@ Astra trains the in-hand manipulation behavior while exposing the reported colli
 
 Astra creates the environment and training-ready humanoid simulation scene.
 
-#### Case 34: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
+#### Case 35: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote demo of Astra building an Isaac Sim RL environment, configuring PPO, and tuning the run.
 
@@ -381,11 +392,17 @@ These entries index representative partial or unsuccessful outcomes. A failure c
 
 - [Rope-driven Dexterous Hand Reconstruction](#case-23-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
 
+## 📊 Public Benchmark & Evaluation Reports
+
+Public evaluation repositories and result reports for GPT-6 Astra in embodied-AI settings. Results below are reported by the respective maintainers and should be interpreted within each project's disclosed hardware, task, and evaluation protocol.
+
+- [RoboCurve GPT-6 Astra evaluation](https://openai.robocurve.org/gpt-6-astra/): controlled YAM-arm comparison reporting 19/20 bowl-task completions for Astra and 80% fewer output tokens; published 2026-09-04.
+- [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval): open evaluation repository reporting one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger.
+- [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy), from [Galaxea AI (银河通用)](https://www.galaxea-ai.com/): public benchmark repository and result report evaluating GPT-6 Astra as a robot policy.
+
 ## 🔗 Related Blogs & Projects
 
 - [OpenAI: GPT-6 Astra](https://openai.com/index/gpt-6-astra/): the original OpenAI announcement and system overview.
-- [Robocurve GPT-6 Astra evaluation](https://openai.robocurve.org/gpt-6-astra/): controlled YAM-arm comparison reporting 19/20 bowl-task completions for Astra and 80% fewer output tokens; published 2026-09-04.
-- [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval): one-shot video demonstration to real-world robot execution with GPT-6 Astra.
 
 ## 🙏 Credits
 
