@@ -82,7 +82,7 @@ Astra performs zero-shot dexterous cube manipulation in simulation.
 
 #### Case 7: [Dexterous Apple-stem Grasp in SuperDex](https://www.rednote.com/discovery/item/6aa27b3a000000002b025d03?xsec_token=ABWznjLAd9oNPOxPF1Mc6ZfMK0VKAVH4AMkoYwkdPqQRw=&xsec_source=pc_search&source=web_profile_page)
 
-**Source / Credit:** [Kiki Huang](https://www.rednote.com/user/profile/62f72244000000001f0176ea), Rednote demo using the Meta SuperDex physics backend and MuJoCo rendering.
+**Source / Credit:** [Kiki Huang](https://www.rednote.com/user/profile/62f72244000000001f0176ea), Rednote demo using the Meta SuperDex physics backend and MuJoCo rendering. The demo package is now open source in [DexLab](https://github.com/huangkiki/Dexlab/tree/main/demos/apple-stem-grasp).
 
 **Published:** 2026-09-10
 
