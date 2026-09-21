@@ -398,7 +398,7 @@ Public evaluation repositories and result reports for GPT-6 Astra in embodied-AI
 
 - [RoboCurve GPT-6 Astra evaluation](https://openai.robocurve.org/gpt-6-astra/): controlled YAM-arm comparison reporting 19/20 bowl-task completions for Astra and 80% fewer output tokens; published 2026-09-04.
 - [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval): open evaluation repository reporting one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger.
-- [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy), from [Galaxea AI (银河通用)](https://www.galaxea-ai.com/): public benchmark repository and result report evaluating GPT-6 Astra as a robot policy.
+- [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy), from [Galbot (银河通用)](https://www.galbot.com/): public benchmark repository and result report evaluating GPT-6 Astra as a robot policy.
 
 ## 🔗 Related Blogs & Projects
 
