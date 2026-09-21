@@ -404,12 +404,12 @@ These entries index representative partial or unsuccessful outcomes. A failure c
 
 ## 📊 Public Benchmark & Evaluation Reports
 
-Public evaluation repositories and result reports for GPT-6 Astra in embodied-AI settings. Results below are reported by the respective maintainers and should be interpreted within each project's disclosed hardware, task, and evaluation protocol.
+Public evaluation repositories and result reports for GPT-6 Astra in embodied-AI settings. Entries are ordered by publication date, earliest first, with the official RoboCurve evaluation listed first. Results below are reported by the respective maintainers and should be interpreted within each project's disclosed hardware, task, and evaluation protocol.
 
-- [RoboDojo GPT-6 Astra evaluation](https://robodojo-benchmark.com/report/gpt-6-astra-eval): zero-shot evaluation through the fixed, non-learned RoboProbe harness on 42 simulation tasks (2,100 trials, one seed), reporting 28.97 Average Score and 22.48% Average SR; real-robot results are diagnostic only after testing was halted for safety; published 2026-09-16.
 - [RoboCurve GPT-6 Astra evaluation](https://openai.robocurve.org/gpt-6-astra/): controlled YAM-arm comparison reporting 19/20 bowl-task completions for Astra and 80% fewer output tokens; published 2026-09-04.
-- [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval): open evaluation repository reporting one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger.
-- [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy), from [Galbot (银河通用)](https://www.galbot.com/): public benchmark repository and result report evaluating GPT-6 Astra as a robot policy.
+- [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval): open evaluation repository reporting one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger; published 2026-09-11.
+- [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy), from [Galbot (银河通用)](https://www.galbot.com/): public benchmark repository and result report evaluating GPT-6 Astra as a robot policy; published 2026-09-16.
+- [RoboDojo GPT-6 Astra evaluation](https://robodojo-benchmark.com/report/gpt-6-astra-eval): zero-shot evaluation through the fixed, non-learned RoboProbe harness on 42 simulation tasks (2,100 trials, one seed), reporting 28.97 Average Score and 22.48% Average SR; real-robot results are diagnostic only after testing was halted for safety; published 2026-09-16.
 
 ## 🔗 Related Blogs & Projects
 
