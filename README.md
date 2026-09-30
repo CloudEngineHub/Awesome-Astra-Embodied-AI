@@ -254,7 +254,7 @@ Astra performs high-level task understanding and decomposition, then calls a pre
 
 **Published:** 2026-09-27 (arXiv submission)
 
-<p align="center"><video src="https://seungyeon.me/RHD/assets/demo.mp4" controls width="720"></video></p>
+https://github.com/user-attachments/assets/7ee7102c-1efe-482e-8ec8-2cb581495e99
 
 Astra distills its robotic problem-solving experience into a playbook and recursively refines it through Luna’s execution feedback, enabling the cheaper Luna agent to guide a frozen VLA.
 
