@@ -9,7 +9,7 @@ Cases are grouped by workflow and ordered by publication date, newest first with
 - 🤖 [Zero-shot Control](#-zero-shot-control)
   - 🧪 [Deploy in Simulation](#-deploy-in-simulation) — 12 cases
   - 🌍 [Deploy in Real World](#-deploy-in-real-world) — 10 cases
-- 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 2 cases
+- 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 3 cases
 - 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 7 cases
 - 🛠️ [Astra Builds RL Training Environments and Training](#-astra-builds-rl-training-environments-and-training) — 6 cases
 - 📊 [Public Benchmark & Evaluation Reports](#-public-benchmark--evaluation-reports)
@@ -248,7 +248,17 @@ Astra directly controls Piper through repeated visual pick-and-place attempts.
 
 Astra performs high-level task understanding and decomposition, then calls a pretrained embodied foundation model for low-level control.
 
-#### Case 23: [Harness VLA: Memory-guided agentic manipulation](https://harnessvla.github.io/)
+#### Case 23: [Distilling Astra’s Capabilities into a Playbook](https://seungyeon.me/RHD/)
+
+**Source / Credit:** [Seungyeon Kim et al.](https://arxiv.org/abs/2609.33378), Recursive Harness Distillation (RHD). [Project Page](https://seungyeon.me/RHD/), [Paper](https://arxiv.org/abs/2609.33378), [Hugging Face](https://huggingface.co/papers/2609.33378), and [LinkedIn](https://www.linkedin.com/posts/seungyeonkim1_embodiedai-robotics-vla-activity-7510680971252535296-W-3S).
+
+**Published:** 2026-09-27 (arXiv submission)
+
+<p align="center"><video src="https://seungyeon.me/RHD/assets/demo.mp4" controls width="720"></video></p>
+
+Astra distills its robotic problem-solving experience into a playbook and recursively refines it through Luna’s execution feedback, enabling the cheaper Luna agent to guide a frozen VLA.
+
+#### Case 24: [Harness VLA: Memory-guided agentic manipulation](https://harnessvla.github.io/)
 
 **Source / Credit:** Harness VLA / RPent team — [Project](https://harnessvla.github.io/), [Video](https://harnessvla.github.io/#video-introduction), [Paper](https://arxiv.org/abs/2607.08448), and [Code (RPent)](https://github.com/RLinf/RPent).
 
@@ -258,7 +268,7 @@ Astra performs high-level task understanding and decomposition, then calls a pre
 
 GPT-6 Astra acts as the planner in RPent, combining memory and visual feedback to compose frozen VLA calls with a fixed library of analytic motion primitives. The real-robot demonstration shows task retargeting, ordered execution, sorting, and recovery from failed grasps without fine-tuning the VLA. The sequence above follows one plate-sorting task from a failed grasp through retry and placement.
 
-#### Case 24: [Zero-shot Task Execution through FluxVLA](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
+#### Case 25: [Zero-shot Task Execution through FluxVLA](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [Jikun](https://www.rednote.com/user/profile/5e25bcdc00000000010085a8), Rednote demo pairing GPT-6 Astra with the pretrained [FluxVLA](https://github.com/FluxVLA/FluxVLA) policy.
 
@@ -272,7 +282,7 @@ GPT-6 Astra acts as the planner in RPent, combining memory and visual feedback t
 
 Workflows that reconstruct or replay real-world trajectories, demonstrations, and environments in simulation.
 
-#### Case 25: [Real2Sim2Real RL: Humanoid Cart-pushing in a Reconstructed Office](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
+#### Case 26: [Real2Sim2Real RL: Humanoid Cart-pushing in a Reconstructed Office](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
 
 **Source / Credit:** [watchtower](https://www.rednote.com/user/profile/5e38ca4e00000000010034fa), Rednote demo of a full GPT-6 Astra real-to-sim-to-real loop on a humanoid robot in an office.
 
@@ -282,7 +292,7 @@ Workflows that reconstruct or replay real-world trajectories, demonstrations, an
 
 Astra rebuilds the real office as a simulation scene (real2sim), estimates contact points and other key supervision signals, and trains a reinforcement-learning manipulation policy from them. In the reconstructed scene it decides where to grasp and where to push while SONIC drives the humanoid's whole-body motion, and the trained policy is then deployed back onto the real robot (sim2real), which pushes a cart through the doorway. The posted video runs at real speed in a single unedited take, and longer-horizon tasks are planned.
 
-#### Case 26: [Lab Kitchen Reconstruction with Articulated Objects](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
+#### Case 27: [Lab Kitchen Reconstruction with Articulated Objects](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [Frank ZY Dou](https://www.rednote.com/user/profile/5e3431cf0000000001002919), Rednote demo reconstructing a lab kitchen from a 20-second monocular RGB video with movable cabinets and other articulated structures.
 
@@ -292,7 +302,7 @@ Astra rebuilds the real office as a simulation scene (real2sim), estimates conta
 
 Astra iteratively models a real kitchen and its articulated objects into a simulation scene.
 
-#### Case 27: [Rope-driven Dexterous Hand Reconstruction](https://x.com/dimentary/status/2097857980150763900)
+#### Case 28: [Rope-driven Dexterous Hand Reconstruction](https://x.com/dimentary/status/2097857980150763900)
 
 **Source / Credit:** [Dmytro Hrybov (@dimentary)](https://x.com/dimentary), X attempt to recreate 1X's tendon-driven hand demo from a reference video in MuJoCo.
 
@@ -302,7 +312,7 @@ Astra iteratively models a real kitchen and its articulated objects into a simul
 
 Astra rebuilds the hand and motion, but uses simplified mechanics and illustrative cable deformation rather than full tendon-transmission physics.
 
-#### Case 28: [Tendon-driven Dexterous Hand Motion Reconstruction](https://x.com/earthtojake/status/2097789988670709821)
+#### Case 29: [Tendon-driven Dexterous Hand Motion Reconstruction](https://x.com/earthtojake/status/2097789988670709821)
 
 **Source / Credit:** [Jake Fitzgerald (@earthtojake)](https://x.com/earthtojake), X demo in which Astra designs and reconstructs the motion of a tendon-driven robot hand.
 
@@ -312,7 +322,7 @@ Astra rebuilds the hand and motion, but uses simplified mechanics and illustrati
 
 Astra reconstructs the tendon-driven hand's motion in a simulated model, including cable-actuated finger movement.
 
-#### Case 29: [Dexterous Hand-object Data Rollout](https://x.com/Lingxiao234/status/2097717020540481630)
+#### Case 30: [Dexterous Hand-object Data Rollout](https://x.com/Lingxiao234/status/2097717020540481630)
 
 **Source / Credit:** [Lingxiao (@Lingxiao234)](https://x.com/Lingxiao234), X demo showing two videos driving real-to-sim reconstruction and physical retargeting to Wuji hands.
 
@@ -322,7 +332,7 @@ Astra reconstructs the tendon-driven hand's motion in a simulated model, includi
 
 Astra reconstructs hand-object interaction from videos without explicit states or actions.
 
-#### Case 30: [Video in → Physics out](https://x.com/huxiao93612565/status/2097815230105399402)
+#### Case 31: [Video in → Physics out](https://x.com/huxiao93612565/status/2097815230105399402)
 
 **Source / Credit:** [xiao hu (@huxiao93612565)](https://x.com/huxiao93612565), X demo of Astra writing hand tracking, IK retargeting, and grasp-refinement code for a 44-DOF hand.
 
@@ -332,7 +342,7 @@ Astra reconstructs hand-object interaction from videos without explicit states o
 
 Astra turns visual hand motion into a physics-backed dexterous-hand replay.
 
-#### Case 31: [Multi-view Real-to-sim Reconstruction](https://x.com/Lingxiao234/status/2096992059731443923)
+#### Case 32: [Multi-view Real-to-sim Reconstruction](https://x.com/Lingxiao234/status/2096992059731443923)
 
 **Source / Credit:** [Lingxiao (@Lingxiao234)](https://x.com/Lingxiao234), X demo combining multi-view RGB, robot actions, camera calibration, assets, system identification, MuJoCo, and Blender.
 
@@ -346,7 +356,7 @@ Astra builds a replayable simulator from demonstrations, geometry, and physical 
 
 Workflows where Astra helps create environments, task definitions, training code, and experiment iterations.
 
-#### Case 32: [Sharpa Hand Pen-spinning RL in Isaac Lab](https://x.com/walterzhu8/status/2100212420840989112)
+#### Case 33: [Sharpa Hand Pen-spinning RL in Isaac Lab](https://x.com/walterzhu8/status/2100212420840989112)
 
 **Source / Credit:** [Wentao Zhu (@walterzhu8)](https://x.com/walterzhu8), X report of an autonomous Astra run by his student Chengyang Li to build and train a dexterous-hand pen-spinning task.
 
@@ -356,7 +366,7 @@ Workflows where Astra helps create environments, task definitions, training code
 
 Astra creates the pen mesh, implements the Sharpa-hand task in Isaac Lab, trains the PPO policy, and produces a visualization video during an autonomous run of about a day and a half.
 
-#### Case 33: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
+#### Case 34: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [拂晓时分_茉莉飘香](https://www.rednote.com/user/profile/5ffbc96d00000000010060ae), Rednote demo reporting an RL-trained duck robot generated from one image and one description.
 
@@ -366,7 +376,7 @@ Astra creates the pen mesh, implements the Sharpa-hand task in Isaac Lab, trains
 
 Astra builds and trains a locomotion demo from a compact visual specification.
 
-#### Case 34: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
+#### Case 35: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
 
 **Source / Credit:** [Akira Sasaki (@gclue_akira)](https://x.com/gclue_akira), X report of Astra designing a robot dog, iterating 25 loops in five days, and training nine motions with RL.
 
@@ -376,7 +386,7 @@ Astra builds and trains a locomotion demo from a compact visual specification.
 
 Astra co-designs the quadruped and trains a simulated locomotion system; real-hardware debugging is planned rather than completed.
 
-#### Case 35: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
+#### Case 36: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote RL demo of a dexterous hand manipulating a walnut; self-collision was not enabled in the reported run.
 
@@ -386,7 +396,7 @@ Astra co-designs the quadruped and trains a simulated locomotion system; real-ha
 
 Astra trains the in-hand manipulation behavior while exposing the reported collision-model limitation.
 
-#### Case 36: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
+#### Case 37: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
 
 **Source / Credit:** [Jiarui Xu (@Jiarui_X)](https://x.com/Jiarui_X), X demo where Astra rebuilds an office scan in Blender, exports USD, and creates a G1 walking scene in Newton.
 
@@ -396,7 +406,7 @@ Astra trains the in-hand manipulation behavior while exposing the reported colli
 
 Astra creates the environment and training-ready humanoid simulation scene.
 
-#### Case 37: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
+#### Case 38: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote demo of Astra building an Isaac Sim RL environment, configuring PPO, and tuning the run.
 
@@ -410,7 +420,7 @@ Astra handles environment construction, training configuration, and iteration in
 
 These entries index representative partial or unsuccessful outcomes. A failure can reflect modeling, calibration, embodiment, or tool limits in one setup and does not prove that Astra lacks the underlying capability.
 
-- [Rope-driven Dexterous Hand Reconstruction](#case-27-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
+- [Rope-driven Dexterous Hand Reconstruction](#case-28-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
 
 ## 📊 Public Benchmark & Evaluation Reports
 
@@ -420,7 +430,7 @@ Public evaluation repositories and result reports for GPT-6 Astra in embodied-AI
 - [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval): open evaluation repository reporting one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger; published 2026-09-11.
 - [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy), from [Galbot (银河通用)](https://www.galbot.com/): public benchmark repository and result report evaluating GPT-6 Astra as a robot policy; published 2026-09-16.
 - [RoboDojo GPT-6 Astra evaluation](https://robodojo-benchmark.com/report/gpt-6-astra-eval): zero-shot evaluation through the fixed, non-learned RoboProbe harness on 42 simulation tasks (2,100 trials, one seed), reporting 28.97 Average Score and 22.48% Average SR; real-robot results are diagnostic only after testing was halted for safety; published 2026-09-16.
-- [RPent](https://github.com/RLinf/RPent) (Recursive Physical Agent), from the [RLinf](https://github.com/RLinf/RLinf) team: open recursive-agent harness that pairs an agentic planner (Codex / GPT-6 Astra) with frozen VLA primitives, with a public [leaderboard](https://github.com/RLinf/RPent#leaderboard) covering LIBERO, LIBERO-PRO, RoboCasa365 Target50, and RoboTwin C2R. Reported GPT-6 Astra results include 92.63% overall (741/800) across all eight LIBERO-PRO suites — versus 82.4% for RPent/Claude Opus 4.7 and 50.0% for the frozen π_RLinf VLA — and a chart-leading 59.20% on RoboCasa365 Target50; leaderboard published 2026-09-21. See also [Case 23](#case-23-harness-vla-memory-guided-agentic-manipulation) for the underlying Harness VLA method.
+- [RPent](https://github.com/RLinf/RPent) (Recursive Physical Agent), from the [RLinf](https://github.com/RLinf/RLinf) team: open recursive-agent harness that pairs an agentic planner (Codex / GPT-6 Astra) with frozen VLA primitives, with a public [leaderboard](https://github.com/RLinf/RPent#leaderboard) covering LIBERO, LIBERO-PRO, RoboCasa365 Target50, and RoboTwin C2R. Reported GPT-6 Astra results include 92.63% overall (741/800) across all eight LIBERO-PRO suites — versus 82.4% for RPent/Claude Opus 4.7 and 50.0% for the frozen π_RLinf VLA — and a chart-leading 59.20% on RoboCasa365 Target50; leaderboard published 2026-09-21. See also [Case 24](#case-24-harness-vla-memory-guided-agentic-manipulation) for the underlying Harness VLA method.
 
 ## 🔗 Related Blogs & Projects
 
