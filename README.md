@@ -2,6 +2,8 @@
 
 GPT-6 Astra with embodied AI / robotics workflows and demos.
 
+Maintained by [@zjwzcx](https://github.com/zjwzcx) ([homepage](https://xiao-chen.tech/)). Pull requests with new cases, corrections, and source updates are welcome.
+
 ## Contents
 
 Cases are grouped by workflow and ordered by publication date, newest first within each section.
