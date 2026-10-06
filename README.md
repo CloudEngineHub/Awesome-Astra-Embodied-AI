@@ -6,13 +6,26 @@ GPT-6 Astra with embodied AI / robotics workflows and demos.
 
 Cases are grouped by workflow and ordered by publication date, newest first within each section.
 
+- 📊 [Public Benchmark & Evaluation Reports](#-public-benchmark--evaluation-reports)
 - 🤖 [Zero-shot Control](#-zero-shot-control)
   - 🧪 [Deploy in Simulation](#-deploy-in-simulation) — 12 cases
   - 🌍 [Deploy in Real World](#-deploy-in-real-world) — 10 cases
 - 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 4 cases
 - 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 8 cases
 - 🛠️ [Astra Builds RL Training Environments and Training](#-astra-builds-rl-training-environments-and-training) — 6 cases
-- 📊 [Public Benchmark & Evaluation Reports](#-public-benchmark--evaluation-reports)
+
+## 📊 Public Benchmark & Evaluation Reports
+
+GPT-6 Astra is introduced in the official [OpenAI announcement](https://openai.com/index/gpt-6-astra/). Below are public evaluation repositories and result reports for GPT-6 Astra in embodied-AI settings, ordered by publication date; results are reported by the respective maintainers and should be interpreted within each project's disclosed setup.
+
+- **[RoboCurve GPT-6 Astra evaluation](https://openai.robocurve.org/gpt-6-astra/)**: controlled YAM-arm comparison reporting 19/20 bowl-task completions and 80% fewer output tokens; published 2026-09-04.
+- **[GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval)**: one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger; published 2026-09-11.
+- **[GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy)**: public benchmark repository and result report evaluating GPT-6 Astra as a robot policy; published 2026-09-16.
+- **[RoboDojo GPT-6 Astra evaluation](https://robodojo-benchmark.com/report/gpt-6-astra-eval)**: zero-shot evaluation via the fixed RoboProbe harness on 42 simulation tasks (2,100 trials), reporting 28.97 Average Score and 22.48% Average SR; real-robot testing was halted for safety; published 2026-09-16.
+- **[RPent](https://github.com/RLinf/RPent)**: recursive-agent harness pairing an agentic planner with frozen VLA primitives, with a public [leaderboard](https://github.com/RLinf/RPent#leaderboard); GPT-6 Astra reports 92.63% on LIBERO-PRO and a chart-leading 59.20% on RoboCasa365 Target50; published 2026-09-21. See also [Case 25](#case-25-harness-vla-memory-guided-agentic-manipulation).
+- **[Astra on RoboMME](https://bingaochen.github.io/Astra-on-RoboMME/)**: three-tier memory-augmented manipulation (Astra planner, fine-tuned VLA, VLM completion monitor) reporting 79.13% success (633/800) on the RoboMME test set; published 2026-09-22. See also [Case 24](#case-24-astra-on-robomme-three-tier-memory-augmented-manipulation).
+- **[Moonlake: Evaluating a 3D Agent for Sim-Ready Assets](https://moonlakeai.com/blog/evaluating-3d-agent)** ([announcement](https://x.com/sharonal_lee/status/2107148914269032875)): sim-ready asset generation benchmark comparing Moonlake's 3D Agent against GPT-6 Astra and other baselines across 22 metrics and Isaac Sim interaction tests; reported rank score 65.2 vs Astra 47.0; published 2026-10-05.
+- **[4DCodeBench](https://4dcodebench.com/)** ([paper](https://arxiv.org/abs/2610.03715), [announcement](https://x.com/zzigakovacic/status/2107153000179642438)): inverse-graphics benchmark where agents write executable code reconstructing dynamic scenes from 200 videos (100 real, 100 simulated); GPT-6 Astra [Max] leads the 18-agent ranking (Overall 0.79) and dynamics by 31%; published 2026-10-05.
 
 ## 🤖 Zero-shot Control
 
@@ -439,23 +452,6 @@ Astra handles environment construction, training configuration, and iteration in
 These entries index representative partial or unsuccessful outcomes. A failure can reflect modeling, calibration, embodiment, or tool limits in one setup and does not prove that Astra lacks the underlying capability.
 
 - [Rope-driven Dexterous Hand Reconstruction](#case-30-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
-
-## 📊 Public Benchmark & Evaluation Reports
-
-Public evaluation repositories and result reports for GPT-6 Astra in embodied-AI settings. Entries are ordered by publication date, earliest first, with the official RoboCurve evaluation listed first. Results below are reported by the respective maintainers and should be interpreted within each project's disclosed hardware, task, and evaluation protocol.
-
-- [RoboCurve GPT-6 Astra evaluation](https://openai.robocurve.org/gpt-6-astra/): controlled YAM-arm comparison reporting 19/20 bowl-task completions for Astra and 80% fewer output tokens; published 2026-09-04.
-- [GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval): open evaluation repository reporting one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger; published 2026-09-11.
-- [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy), from [Galbot (银河通用)](https://www.galbot.com/): public benchmark repository and result report evaluating GPT-6 Astra as a robot policy; published 2026-09-16.
-- [RoboDojo GPT-6 Astra evaluation](https://robodojo-benchmark.com/report/gpt-6-astra-eval): zero-shot evaluation through the fixed, non-learned RoboProbe harness on 42 simulation tasks (2,100 trials, one seed), reporting 28.97 Average Score and 22.48% Average SR; real-robot results are diagnostic only after testing was halted for safety; published 2026-09-16.
-- [RPent](https://github.com/RLinf/RPent) (Recursive Physical Agent), from the [RLinf](https://github.com/RLinf/RLinf) team: open recursive-agent harness that pairs an agentic planner (Codex / GPT-6 Astra) with frozen VLA primitives, with a public [leaderboard](https://github.com/RLinf/RPent#leaderboard) covering LIBERO, LIBERO-PRO, RoboCasa365 Target50, and RoboTwin C2R. Reported GPT-6 Astra results include 92.63% overall (741/800) across all eight LIBERO-PRO suites — versus 82.4% for RPent/Claude Opus 4.7 and 50.0% for the frozen π_RLinf VLA — and a chart-leading 59.20% on RoboCasa365 Target50; leaderboard published 2026-09-21. See also [Case 25](#case-25-harness-vla-memory-guided-agentic-manipulation) for the underlying Harness VLA method.
-- [Astra on RoboMME](https://bingaochen.github.io/Astra-on-RoboMME/), from Bingao Chen, Haoquan Fang, and C. Karen Liu (Stanford University): reports 79.13% success (633/800) across 16 tasks on the official RoboMME test set, averaging 3.63 Astra calls per episode. The three-tier controller uses a fine-tuned VLA and completion monitor; simulation is paused during planner inference. The blog includes methods, per-task results, and rollout videos; published 2026-09-22. See also [Case 24](#case-24-astra-on-robomme-three-tier-memory-augmented-manipulation) for the architecture.
-- [Moonlake: Evaluating a 3D Agent for Sim-Ready Assets](https://moonlakeai.com/blog/evaluating-3d-agent) ([announcement](https://x.com/sharonal_lee/status/2107148914269032875)): public benchmark of sim-ready asset generation on ten articulated assets, comparing Moonlake's 3D Agent against GPT-6 Astra as a frontier coding-agent baseline, plus Lightwheel, Palatial, Tripo, and human technical artists, across 22 automated metrics (physics authoring, articulation, render and collision geometry, UVs, materials) and functional interaction tests in Isaac Sim. Reported summary rank score: Moonlake 65.2, Astra 47.0, Palatial 47.0, Lightwheel 40.9; the authors note these metrics are a proxy pending correlation with policy-learning outcomes; published 2026-10-05.
-- [4DCodeBench](https://4dcodebench.com/) ([paper](https://arxiv.org/abs/2610.03715), [announcement](https://x.com/zzigakovacic/status/2107153000179642438)), from Ruihong Shen, Žiga Kovačič, Peter Kulits et al. (JHU, Stanford, and MIT): benchmark for inverse graphics of dynamic scenes — agents receive a video of a physical event (100 real and 100 simulated videos, 200 tasks) and write executable graphics code reconstructing the scene's 3D geometry, motion over time, and rendering. 18 agents are ranked by an Overall score over five metric families, plus VLM-as-judge Elo validated against 3,587 human pairwise judgments (Spearman ρ = 0.98). GPT-6 Astra [Max] leads the overall ranking (Overall 0.79, ahead of Claude Opus 5.5 [High]) and leads on dynamics by 31% over the next-best model; raising Astra's reasoning effort from Low to Max lifts its Overall from 0.73 to 0.79; published 2026-10-05.
-
-## 🔗 Related Blogs & Projects
-
-- [OpenAI: GPT-6 Astra](https://openai.com/index/gpt-6-astra/): the original OpenAI announcement and system overview.
 
 ## 🙏 Credits
 
