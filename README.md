@@ -14,7 +14,7 @@ Cases are grouped by workflow and ordered by publication date, newest first with
   - 🌍 [Deploy in Real World](#-deploy-in-real-world) — 10 cases
 - 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 5 cases
 - 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 8 cases
-- 🛠️ [Astra Builds RL Training Environments and Training](#-astra-builds-rl-training-environments-and-training) — 6 cases
+- 🛠️ [Astra Builds RL Training Environments and Training](#-astra-builds-rl-training-environments-and-training) — 7 cases
 
 ## 📊 Public Benchmark & Evaluation Reports
 
@@ -399,7 +399,17 @@ Astra builds a replayable simulator from demonstrations, geometry, and physical 
 
 Workflows where Astra helps create environments, task definitions, training code, and experiment iterations.
 
-#### Case 36: [Sharpa Hand Pen-spinning RL in Isaac Lab](https://x.com/walterzhu8/status/2100212420840989112)
+#### Case 36: [Dexterous Astra: Pen Spinning and Rubik's Cube](https://github.com/jianglongye/dexterous-astra)
+
+**Source / Credit:** [Jianglong Ye (@jianglong_ye)](https://github.com/jianglongye), UC San Diego Ph.D. student — open-source release of the final artifacts from his Astra experiments, including the exact zero-shot prompt for reproducibility.
+
+**Published:** 2026-09-17
+
+<p align="center"><img src="assets/case-38-dexterous-astra.jpg" alt="Zero-shot and PPO-trained pen spinning and Rubik's cube dexterous manipulation" width="720" /></p>
+
+Astra builds the simulation environment and solution code for each of two dexterous tasks, shipped with `sim/`, `zero_shot/`, `policy/`, and `checkpoints/`: pen spinning with a Sharpa Wave hand in Isaac Lab, where a zero-shot sampled finger-keyframe planner gives a fragile spin and a PPO policy completes three turns and a hold; and Rubik's cube manipulation with Wuji hands in MuJoCo, where a zero-shot two-hand scripted controller executes two moves and a learned one-hand policy of turns and rolls solves `U F L`. The author notes these are the final artifacts of Astra's experiments rather than a task-specific harness or benchmark provided to Astra.
+
+#### Case 37: [Sharpa Hand Pen-spinning RL in Isaac Lab](https://x.com/walterzhu8/status/2100212420840989112)
 
 **Source / Credit:** [Wentao Zhu (@walterzhu8)](https://x.com/walterzhu8), X report of an autonomous Astra run by his student Chengyang Li to build and train a dexterous-hand pen-spinning task.
 
@@ -409,7 +419,7 @@ Workflows where Astra helps create environments, task definitions, training code
 
 Astra creates the pen mesh, implements the Sharpa-hand task in Isaac Lab, trains the PPO policy, and produces a visualization video during an autonomous run of about a day and a half.
 
-#### Case 37: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
+#### Case 38: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [拂晓时分_茉莉飘香](https://www.rednote.com/user/profile/5ffbc96d00000000010060ae), Rednote demo reporting an RL-trained duck robot generated from one image and one description.
 
@@ -419,7 +429,7 @@ Astra creates the pen mesh, implements the Sharpa-hand task in Isaac Lab, trains
 
 Astra builds and trains a locomotion demo from a compact visual specification.
 
-#### Case 38: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
+#### Case 39: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
 
 **Source / Credit:** [Akira Sasaki (@gclue_akira)](https://x.com/gclue_akira), X report of Astra designing a robot dog, iterating 25 loops in five days, and training nine motions with RL.
 
@@ -429,7 +439,7 @@ Astra builds and trains a locomotion demo from a compact visual specification.
 
 Astra co-designs the quadruped and trains a simulated locomotion system; real-hardware debugging is planned rather than completed.
 
-#### Case 39: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
+#### Case 40: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote RL demo of a dexterous hand manipulating a walnut; self-collision was not enabled in the reported run.
 
@@ -439,7 +449,7 @@ Astra co-designs the quadruped and trains a simulated locomotion system; real-ha
 
 Astra trains the in-hand manipulation behavior while exposing the reported collision-model limitation.
 
-#### Case 40: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
+#### Case 41: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
 
 **Source / Credit:** [Jiarui Xu (@Jiarui_X)](https://x.com/Jiarui_X), X demo where Astra rebuilds an office scan in Blender, exports USD, and creates a G1 walking scene in Newton.
 
@@ -449,7 +459,7 @@ Astra trains the in-hand manipulation behavior while exposing the reported colli
 
 Astra creates the environment and training-ready humanoid simulation scene.
 
-#### Case 41: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
+#### Case 42: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote demo of Astra building an Isaac Sim RL environment, configuring PPO, and tuning the run.
 
