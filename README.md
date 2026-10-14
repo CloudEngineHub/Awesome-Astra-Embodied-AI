@@ -10,7 +10,7 @@ Cases are grouped by workflow and ordered by publication date, newest first with
 
 - 📊 [Public Benchmark & Evaluation Reports](#-public-benchmark--evaluation-reports)
 - 🤖 [Zero-shot Control](#-zero-shot-control)
-  - 🧪 [Deploy in Simulation](#-deploy-in-simulation) — 12 cases
+  - 🧪 [Deploy in Simulation](#-deploy-in-simulation) — 13 cases
   - 🌍 [Deploy in Real World](#-deploy-in-real-world) — 10 cases
 - 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 5 cases
 - 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 8 cases
@@ -484,7 +484,7 @@ Astra handles environment construction, training configuration, and iteration in
 
 These entries index representative partial or unsuccessful outcomes. A failure can reflect modeling, calibration, embodiment, or tool limits in one setup and does not prove that Astra lacks the underlying capability.
 
-- [Rope-driven Dexterous Hand Reconstruction](#case-31-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
+- [Rope-driven Dexterous Hand Reconstruction](#case-32-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
 
 ## 🙏 Credits
 
