@@ -20,6 +20,7 @@ Cases are grouped by workflow and ordered by publication date, newest first with
 
 GPT-6 Astra is introduced in the official [OpenAI announcement](https://openai.com/index/gpt-6-astra/). Below are public evaluation repositories and result reports for GPT-6 Astra in embodied-AI settings, ordered by publication date; results are reported by the respective maintainers and should be interpreted within each project's disclosed setup.
 
+- **[TacTalent: GPT-6 Astra as a Visuo-Tactile Policy](https://tactalent.github.io/)**: few-shot evaluation on 19 UniVTAC and OpenViTac simulation tasks using the RoboICL closed-loop framework without task-specific policy training; vision+tactile input reports 93.8% and 81.8% average success, versus 76.3% and 80.6% for vision-only input, on the disclosed stratified evaluation samples; published 2026-10-17.
 - **[RoboCurve GPT-6 Astra evaluation](https://openai.robocurve.org/gpt-6-astra/)**: controlled YAM-arm comparison reporting 19/20 bowl-task completions and 80% fewer output tokens; published 2026-09-04.
 - **[GPT-Policy-Eval](https://github.com/cheng-haha/GPT-Policy-Eval)**: one-shot transfer from a video demonstration to a real-robot, contact-rich plug-insertion task, without VLA, RL, or DAgger; published 2026-09-11.
 - **[GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy)**: public benchmark repository and result report evaluating GPT-6 Astra as a robot policy; published 2026-09-16.
