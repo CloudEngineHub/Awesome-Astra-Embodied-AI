@@ -201,6 +201,8 @@ Astra explores the robot’s joint readings and reaches a marker grasp in about 
 
 **Published:** 2026-09-11 (arXiv submission)
 
+<p align="center"><img src="assets/case-16-agent-as-policy.jpg" alt="Agent as Policy real-robot assembly with synchronized agent activity records and execution timeline" width="720" /></p>
+
 Agent as Policy (AGP) uses GPT-6 Astra in Codex CLI to control a real YAM robot through a documented observation and motion interface. The agent interprets camera images, writes and runs programs, issues end-effector or joint commands, and revises its actions using physical feedback while model parameters remain fixed. Demonstrations span assembly from human videos, block construction from goal images, dice reorientation, targeted throwing, and bimanual towel folding; the project provides task videos and recorded agent execution traces.
 
 #### Case 17: [GPT-Policy-Eval One-shot Plug Insertion](https://github.com/cheng-haha/GPT-Policy-Eval)
