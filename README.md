@@ -13,7 +13,7 @@ Cases are grouped by workflow and ordered by publication date, newest first with
   - 🧪 [Deploy in Simulation](#-deploy-in-simulation) — 13 cases
   - 🌍 [Deploy in Real World](#-deploy-in-real-world) — 11 cases
 - 🧠 [Agentic Policy Calls](#-agentic-policy-calls) — 5 cases
-- 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 8 cases
+- 🔄 [Real-to-sim Replay / Data Rollout](#-real-to-sim-replay--data-rollout) — 9 cases
 - 🛠️ [Astra Builds RL Training Environments and Training](#-astra-builds-rl-training-environments-and-training) — 7 cases
 
 ## 📊 Public Benchmark & Evaluation Reports
@@ -337,7 +337,17 @@ GPT-6 Astra acts as the planner in RPent, combining memory and visual feedback t
 
 Workflows that reconstruct or replay real-world trajectories, demonstrations, and environments in simulation.
 
-#### Case 30: [Mocap Whip-Cracking and Lasso Retargeting on Real Arms](https://krishnasuresh.org/blog/2026/robot-whips/)
+#### Case 30: [Human Sphere-handling Video → Sharpa Hand Trajectory](https://x.com/memmelma/status/2113601346280804846)
+
+**Source / Credit:** [Marius Memmel (@memmelma)](https://x.com/memmelma), X thread feeding a human sphere-handling video from [Dieter Fox (@fox_dieter17849)](https://x.com/fox_dieter17849) to GPT-6 Astra, asked to convert the human motion into a robot trajectory featuring the [Sharpa](https://x.com/SharpaRobotics) dexterous hand.
+
+**Published:** 2026-10-23
+
+<p align="center"><img src="assets/case-40-sphere-handling-realsim.jpg" alt="Side-by-side source video and simulation of a Sharpa hand handling a yellow sphere" width="720" /></p>
+
+Astra reconstructs the tabletop scene — desk, boxes, bowl, and yellow sphere — and retargets the human hand motion into a simulated robot trajectory: an arm-mounted Sharpa hand grasps the sphere, carries it over the bowl, and places it back on the table, replayed side by side with the source video.
+
+#### Case 31: [Mocap Whip-Cracking and Lasso Retargeting on Real Arms](https://krishnasuresh.org/blog/2026/robot-whips/)
 
 **Source / Credit:** [Krishna Suresh](https://krishnasuresh.org/blog/2026/robot-whips/), blog post from the Robotics and AI Institute demonstrating Vicon-mocap human demonstrations retargeted to an OpenarmX and an xArm7 for whip cracking and cleat lassoing.
 
@@ -347,7 +357,7 @@ Workflows that reconstruct or replay real-world trajectories, demonstrations, an
 
 Astra automatically implements the demonstration-replay pipeline from a single prompt by composing open-source tools (drake, casadi, pinocchio, pink, mjlab): inverse kinematics warm-starts a dynamics-constrained trajectory optimization that tracks the mocap hand motion, and Astra additionally generates the calibration-data collection script, the dynamics model, and an inverse dynamics controller. The robots then execute the trajectories open-loop and reproduce dynamic manipulation skills such as cracking a whip, without any policy learning; imperfect tracking still succeeds when the whip's own physics completes the motion.
 
-#### Case 31: [Real2Sim2Real RL: Humanoid Cart-pushing in a Reconstructed Office](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
+#### Case 32: [Real2Sim2Real RL: Humanoid Cart-pushing in a Reconstructed Office](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
 
 **Source / Credit:** [watchtower](https://www.rednote.com/user/profile/5e38ca4e00000000010034fa), Rednote demo of a full GPT-6 Astra real-to-sim-to-real loop on a humanoid robot in an office.
 
@@ -357,7 +367,7 @@ Astra automatically implements the demonstration-replay pipeline from a single p
 
 Astra rebuilds the real office as a simulation scene (real2sim), estimates contact points and other key supervision signals, and trains a reinforcement-learning manipulation policy from them. In the reconstructed scene it decides where to grasp and where to push while SONIC drives the humanoid's whole-body motion, and the trained policy is then deployed back onto the real robot (sim2real), which pushes a cart through the doorway. The posted video runs at real speed in a single unedited take, and longer-horizon tasks are planned.
 
-#### Case 32: [Lab Kitchen Reconstruction with Articulated Objects](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
+#### Case 33: [Lab Kitchen Reconstruction with Articulated Objects](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [Frank ZY Dou](https://www.rednote.com/user/profile/5e3431cf0000000001002919), Rednote demo reconstructing a lab kitchen from a 20-second monocular RGB video with movable cabinets and other articulated structures.
 
@@ -367,7 +377,7 @@ Astra rebuilds the real office as a simulation scene (real2sim), estimates conta
 
 Astra iteratively models a real kitchen and its articulated objects into a simulation scene.
 
-#### Case 33: [Rope-driven Dexterous Hand Reconstruction](https://x.com/dimentary/status/2097857980150763900)
+#### Case 34: [Rope-driven Dexterous Hand Reconstruction](https://x.com/dimentary/status/2097857980150763900)
 
 **Source / Credit:** [Dmytro Hrybov (@dimentary)](https://x.com/dimentary), X attempt to recreate 1X's tendon-driven hand demo from a reference video in MuJoCo.
 
@@ -377,7 +387,7 @@ Astra iteratively models a real kitchen and its articulated objects into a simul
 
 Astra rebuilds the hand and motion, but uses simplified mechanics and illustrative cable deformation rather than full tendon-transmission physics.
 
-#### Case 34: [Tendon-driven Dexterous Hand Motion Reconstruction](https://x.com/earthtojake/status/2097789988670709821)
+#### Case 35: [Tendon-driven Dexterous Hand Motion Reconstruction](https://x.com/earthtojake/status/2097789988670709821)
 
 **Source / Credit:** [Jake Fitzgerald (@earthtojake)](https://x.com/earthtojake), X demo in which Astra designs and reconstructs the motion of a tendon-driven robot hand.
 
@@ -387,7 +397,7 @@ Astra rebuilds the hand and motion, but uses simplified mechanics and illustrati
 
 Astra reconstructs the tendon-driven hand's motion in a simulated model, including cable-actuated finger movement.
 
-#### Case 35: [Dexterous Hand-object Data Rollout](https://x.com/Lingxiao234/status/2097717020540481630)
+#### Case 36: [Dexterous Hand-object Data Rollout](https://x.com/Lingxiao234/status/2097717020540481630)
 
 **Source / Credit:** [Lingxiao (@Lingxiao234)](https://x.com/Lingxiao234), X demo showing two videos driving real-to-sim reconstruction and physical retargeting to Wuji hands.
 
@@ -397,7 +407,7 @@ Astra reconstructs the tendon-driven hand's motion in a simulated model, includi
 
 Astra reconstructs hand-object interaction from videos without explicit states or actions.
 
-#### Case 36: [Video in → Physics out](https://x.com/huxiao93612565/status/2097815230105399402)
+#### Case 37: [Video in → Physics out](https://x.com/huxiao93612565/status/2097815230105399402)
 
 **Source / Credit:** [xiao hu (@huxiao93612565)](https://x.com/huxiao93612565), X demo of Astra writing hand tracking, IK retargeting, and grasp-refinement code for a 44-DOF hand.
 
@@ -407,7 +417,7 @@ Astra reconstructs hand-object interaction from videos without explicit states o
 
 Astra turns visual hand motion into a physics-backed dexterous-hand replay.
 
-#### Case 37: [Multi-view Real-to-sim Reconstruction](https://x.com/Lingxiao234/status/2096992059731443923)
+#### Case 38: [Multi-view Real-to-sim Reconstruction](https://x.com/Lingxiao234/status/2096992059731443923)
 
 **Source / Credit:** [Lingxiao (@Lingxiao234)](https://x.com/Lingxiao234), X demo combining multi-view RGB, robot actions, camera calibration, assets, system identification, MuJoCo, and Blender.
 
@@ -421,7 +431,7 @@ Astra builds a replayable simulator from demonstrations, geometry, and physical 
 
 Workflows where Astra helps create environments, task definitions, training code, and experiment iterations.
 
-#### Case 38: [Dexterous Astra: Pen Spinning and Rubik's Cube](https://github.com/jianglongye/dexterous-astra)
+#### Case 39: [Dexterous Astra: Pen Spinning and Rubik's Cube](https://github.com/jianglongye/dexterous-astra)
 
 **Source / Credit:** [Jianglong Ye (@jianglong_ye)](https://github.com/jianglongye), UC San Diego Ph.D. student — open-source release of the final artifacts from his Astra experiments, including the exact zero-shot prompt for reproducibility.
 
@@ -431,7 +441,7 @@ Workflows where Astra helps create environments, task definitions, training code
 
 Astra builds the simulation environment and solution code for each of two dexterous tasks, shipped with `sim/`, `zero_shot/`, `policy/`, and `checkpoints/`: pen spinning with a Sharpa Wave hand in Isaac Lab, where a zero-shot sampled finger-keyframe planner gives a fragile spin and a PPO policy completes three turns and a hold; and Rubik's cube manipulation with Wuji hands in MuJoCo, where a zero-shot two-hand scripted controller executes two moves and a learned one-hand policy of turns and rolls solves `U F L`. The author notes these are the final artifacts of Astra's experiments rather than a task-specific harness or benchmark provided to Astra.
 
-#### Case 39: [Sharpa Hand Pen-spinning RL in Isaac Lab](https://x.com/walterzhu8/status/2100212420840989112)
+#### Case 40: [Sharpa Hand Pen-spinning RL in Isaac Lab](https://x.com/walterzhu8/status/2100212420840989112)
 
 **Source / Credit:** [Wentao Zhu (@walterzhu8)](https://x.com/walterzhu8), X report of an autonomous Astra run by his student Chengyang Li to build and train a dexterous-hand pen-spinning task.
 
@@ -441,7 +451,7 @@ Astra builds the simulation environment and solution code for each of two dexter
 
 Astra creates the pen mesh, implements the Sharpa-hand task in Isaac Lab, trains the PPO policy, and produces a visualization video during an autonomous run of about a day and a half.
 
-#### Case 40: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
+#### Case 41: [RL-trained Duck Robot Demo](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
 
 **Source / Credit:** [拂晓时分_茉莉飘香](https://www.rednote.com/user/profile/5ffbc96d00000000010060ae), Rednote demo reporting an RL-trained duck robot generated from one image and one description.
 
@@ -451,7 +461,7 @@ Astra creates the pen mesh, implements the Sharpa-hand task in Isaac Lab, trains
 
 Astra builds and trains a locomotion demo from a compact visual specification.
 
-#### Case 41: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
+#### Case 42: [Quadruped Locomotion System from RL](https://x.com/gclue_akira/status/2098300921658868185)
 
 **Source / Credit:** [Akira Sasaki (@gclue_akira)](https://x.com/gclue_akira), X report of Astra designing a robot dog, iterating 25 loops in five days, and training nine motions with RL.
 
@@ -461,7 +471,7 @@ Astra builds and trains a locomotion demo from a compact visual specification.
 
 Astra co-designs the quadruped and trains a simulated locomotion system; real-hardware debugging is planned rather than completed.
 
-#### Case 42: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
+#### Case 43: [Dexterous In-hand Manipulation RL](https://www.rednote.com/discovery/item/6aa3e146000000002b0123dc?xsec_token=AB5n_GSvnshtGoIJqykTNpkWlIS-zHnIYe2n5pAiGLSgw=&xsec_source=pc_like)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote RL demo of a dexterous hand manipulating a walnut; self-collision was not enabled in the reported run.
 
@@ -471,7 +481,7 @@ Astra co-designs the quadruped and trains a simulated locomotion system; real-ha
 
 Astra trains the in-hand manipulation behavior while exposing the reported collision-model limitation.
 
-#### Case 43: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
+#### Case 44: [Office Scan → Newton / G1 Humanoid Gym](https://x.com/Jiarui_X/status/2098439950991806804)
 
 **Source / Credit:** [Jiarui Xu (@Jiarui_X)](https://x.com/Jiarui_X), X demo where Astra rebuilds an office scan in Blender, exports USD, and creates a G1 walking scene in Newton.
 
@@ -481,7 +491,7 @@ Astra trains the in-hand manipulation behavior while exposing the reported colli
 
 Astra creates the environment and training-ready humanoid simulation scene.
 
-#### Case 44: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
+#### Case 45: [Isaac Sim Environment, PPO Training, and Tuning](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
 
 **Source / Credit:** [十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2), Rednote demo of Astra building an Isaac Sim RL environment, configuring PPO, and tuning the run.
 
@@ -495,7 +505,7 @@ Astra handles environment construction, training configuration, and iteration in
 
 These entries index representative partial or unsuccessful outcomes. A failure can reflect modeling, calibration, embodiment, or tool limits in one setup and does not prove that Astra lacks the underlying capability.
 
-- [Rope-driven Dexterous Hand Reconstruction](#case-33-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
+- [Rope-driven Dexterous Hand Reconstruction](#case-34-rope-driven-dexterous-hand-reconstruction): partial real-to-sim reconstruction with simplified tendon mechanics and illustrative cable deformation; full tendon-transmission physics remains unfinished.
 
 ## 🙏 Credits
 
